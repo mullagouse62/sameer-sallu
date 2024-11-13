@@ -50,7 +50,7 @@
 
         /* Logo Styling */
         .logo {
-            width: 100px;
+            width: 80px; /* Reduced logo size */
             height: auto;
             margin-bottom: 20px;
         }
@@ -59,7 +59,7 @@
         .shop-name {
             font-size: 2em;
             font-weight: bold;
-            color: #8e44ad; /* New text color for the shop name */
+            color: #FF0000; /* New text color for the shop name */
             background: linear-gradient(45deg, #e67e22, #f1c40f); /* Original background */
             padding: 15px;
             border-radius: 12px;
@@ -115,6 +115,13 @@
             margin-top: 10px;
             font-weight: bold;
         }
+
+        .date {
+            font-size: 1.2em;
+            color: #ecf0f1;
+            margin-top: 10px;
+            font-weight: bold;
+        }
         
     </style>
 </head>
@@ -129,11 +136,17 @@
         </div>
 
         <h1>Proddatur Gold and Silver Rates</h1>
+        
 
         <div class="rate-box">
             <div class="rate-item">Gold 24 Carats (per gram): ₹<span id="gold24Rate">228</span></div>
             <div class="rate-item">Gold 22 Carats (per gram): ₹<span id="gold22Rate">228</span></div>
             <div class="rate-item silver">Silver (per 10 grams): ₹<span id="silverRate">558</span></div>
+        </div>
+
+        <!-- Date Section -->
+        <div class="date">
+            Date: <span id="dateRate">12/11/2024</span>
         </div>
 
         <div class="footer">
