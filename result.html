@@ -3,76 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sameer Jewellers & Al Akram Casting Works</title>
+    <title>Gold and Silver Rates - Sameer Jewellers & Al Akram Casting Works</title>
     <style>
+        /* General Styling */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f5;
-            color: #333;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2e2b26;
+            color: #f8c471;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
         }
+        
         .container {
-            text-align: center;
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 15px;
-            border: 2px solid #333;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
             width: 90%;
             max-width: 600px;
+            padding: 30px;
+            background-color: #3c3b37;
+            border-radius: 15px;
+            position: relative;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            margin: 20px;
         }
+        
+        /* Decorative Zigzag Border */
+        .container:before, .container:after {
+            content: "";
+            position: absolute;
+            top: -15px;
+            bottom: -15px;
+            left: -15px;
+            right: -15px;
+            background: linear-gradient(45deg, #f1c40f, #e67e22);
+            z-index: -1;
+            border-radius: 20px;
+            transform: rotate(2deg);
+        }
+        
+        .container:after {
+            transform: rotate(-2deg);
+        }
+
+        /* Logo Styling */
         .logo {
-            width: 150px;
+            width: 100px;
             height: auto;
             margin-bottom: 20px;
         }
+
+        /* Shop Name Styling */
         .shop-name {
-            font-size: 1.8em;
+            font-size: 2em;
             font-weight: bold;
-            color: #333333;
-            background: linear-gradient(45deg, #e67e22, #f1c40f);
-            padding: 10px;
+            color: #8e44ad; /* New text color for the shop name */
+            background: linear-gradient(45deg, #e67e22, #f1c40f); /* Original background */
+            padding: 15px;
             border-radius: 12px;
-            text-transform: uppercase;
             margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
+
         h1 {
             font-size: 1.6em;
-            color: #2980b9;
+            color: #f39c12;
             text-transform: uppercase;
             font-weight: bold;
-            border-bottom: 2px solid #3498db;
+            border-bottom: 3px solid #f1c40f;
             padding-bottom: 10px;
             margin-bottom: 20px;
         }
-        .footer {
-            font-size: 1em;
-            color: #7f8c8d;
-            margin-top: 20px;
+
+        /* Rates Section */
+        .rate-box {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
         }
+        
+        .rate-item {
+            background: #2e2b26;
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            font-size: 1.8em;
+            color: #f39c12;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border: 2px solid #f1c40f;
+        }
+        
+        .rate-item.silver {
+            color: #b0bec5; /* Silver color for silver rate */
+        }
+
+        /* Footer */
+        .footer {
+            font-size: 1.1em;
+            color: #f1c40f;
+            margin-top: 20px;
+            text-transform: uppercase;
+        }
+
         .contact-info {
             font-size: 1.1em;
+            color: #ecf0f1;
             margin-top: 10px;
-            color: #16a085;
             font-weight: bold;
         }
+        
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- Logo image -->
-        <img src="assets/logo-jewelry.png" alt="Jewelry Logo" class="logo">
+        <!-- Logo Image -->
+        <img src="file-ThpJpTQFtAlS8cRQFWFwrU9L" alt="Jewelry Logo" class="logo">
 
         <div class="shop-name">
             Sameer Jewellers & Al Akram Casting Works
         </div>
 
         <h1>Proddatur Gold and Silver Rates</h1>
+
+        <div class="rate-box">
+            <div class="rate-item">Gold 24 Carats (per gram): ₹<span id="gold24Rate">228</span></div>
+            <div class="rate-item">Gold 22 Carats (per gram): ₹<span id="gold22Rate">228</span></div>
+            <div class="rate-item silver">Silver (per 10 grams): ₹<span id="silverRate">558</span></div>
+        </div>
 
         <div class="footer">
             Thank you for choosing Sameer Jewellers & Al Akram Casting Works
